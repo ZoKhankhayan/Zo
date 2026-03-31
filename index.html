@@ -50,10 +50,6 @@
 
     /* ═══════════════════════════════════════════════════
        CUSTOM CURSOR
-       — solid #FF3A03 circle
-       — mix-blend-mode: difference punches through:
-         dark content inside cursor area → shows as white
-         light background → stays as complementary tint
     ═══════════════════════════════════════════════════ */
     #cursor {
       position: fixed;
@@ -129,7 +125,7 @@
       padding: 0 var(--margin);
     }
 
-    /* ─── 12-col grid ─── */
+    /* ─── 12-col grid (desktop) ─── */
     .page-grid {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
@@ -182,29 +178,6 @@
       text-align: right;
     }
 
-    @media (max-width: 900px) {
-      .nav-links {
-        grid-column: 3 / 13;
-      }
-
-      .nav-loc {
-        display: none;
-      }
-    }
-
-    @media (max-width: 560px) {
-      nav {
-        grid-template-columns: 1fr;
-        row-gap: 12px;
-        padding: 24px var(--margin);
-      }
-
-      .nav-logo,
-      .nav-links {
-        grid-column: 1;
-      }
-    }
-
     /* ═══════════════════════════════════════════════════
        HERO
     ═══════════════════════════════════════════════════ */
@@ -237,27 +210,6 @@
       padding: clamp(24px, 5vw, 24px) 0 clamp(16px, 3vw, 24px);
     }
 
-    @media (max-width: 900px) {
-      .hero-name {
-        grid-column: 3 / 12;
-      }
-
-      .hero-img {
-        grid-column: 12 / 13;
-        width: 100%;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .hero-row {
-        row-gap: 16px;
-      }
-
-      .hero-name {
-        grid-column: 3 / 13;
-      }
-    }
-
     /* ═══════════════════════════════════════════════════
        BIO
     ═══════════════════════════════════════════════════ */
@@ -278,7 +230,7 @@
     ═══════════════════════════════════════════════════ */
     .sec-num {
       grid-column: 1;
-      align-self: center;
+      align-self: end;
       padding: clamp(200px, 5vw, 24px) 0 clamp(16px, 3vw, 24px);
     }
 
@@ -289,12 +241,18 @@
       color: var(--gray-900);
       line-height: 1;
       padding: clamp(200px, 5vw, 24px) 0 clamp(16px, 3vw, 24px);
-      align-self: center;
+      align-self: end;
     }
 
+
+ /* ═══════════════════════════════════════════════════
+       Not is use for now
+    ═══════════════════════════════════════════════════ */
     .sec-title.right {
       text-align: right;
     }
+
+
 
     /* ═══════════════════════════════════════════════════
        PERSONAL DETAILS
@@ -326,34 +284,6 @@
     .det-spacer {
       grid-column: 3 / 13;
       height: 16px;
-    }
-
-    @media (max-width: 900px) {
-      .det-label {
-        grid-column: 3 / 7;
-      }
-
-      .det-val-a {
-        grid-column: 3 / 8;
-      }
-
-      .det-val-b {
-        grid-column: 8 / 13;
-      }
-
-      .det-val-full {
-        grid-column: 3 / 13;
-      }
-    }
-
-    @media (max-width: 560px) {
-
-      .det-label,
-      .det-val-a,
-      .det-val-b,
-      .det-val-full {
-        grid-column: 1 / 13;
-      }
     }
 
     .det-section-end {
@@ -399,59 +329,6 @@
       font-weight: 600;
       font-size: 16px;
       margin-top: 24px;
-    }
-
-    @media (max-width: 900px) {
-      .entry-date {
-        grid-column: 3 / 5;
-      }
-
-      .entry-tag {
-        grid-column: 5 / 8;
-      }
-
-      .entry-content {
-        grid-column: 8 / 13;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .entry-date {
-        grid-column: 3 / 8;
-        padding-bottom: 0;
-      }
-
-      .entry-tag {
-        grid-column: 8 / 13;
-        padding-bottom: 0;
-      }
-
-      .entry-content {
-        grid-column: 3 / 13;
-        padding-top: 8px;
-      }
-    }
-
-    @media (max-width: 420px) {
-
-      .entry-date,
-      .entry-tag,
-      .entry-content {
-        grid-column: 3 / 13;
-      }
-
-      .entry-date {
-        padding-bottom: 0;
-      }
-
-      .entry-tag {
-        padding-top: 0;
-        padding-bottom: 0;
-      }
-
-      .entry-content {
-        padding-top: 8px;
-      }
     }
 
     /* ═══════════════════════════════════════════════════
@@ -503,22 +380,6 @@
     .skill-item-text .h4 {
       margin-top: 2px;
       font-size: 11px;
-    }
-
-    @media (max-width: 900px) {
-      .skill-label {
-        grid-column: 1 / 4;
-      }
-
-      .skill-grid {
-        grid-column: 1 / 13;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .skill-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
     }
 
     /* ═══════════════════════════════════════════════════
@@ -573,182 +434,81 @@
       align-self: flex-end;
     }
 
-    @media (max-width: 768px) {
-      footer {
-        grid-template-columns: 1fr;
-        row-gap: 24px;
-      }
-
-      .footer-contact,
-      .footer-dl,
-      .footer-copy {
-        grid-column: 1;
-      }
-
-      .footer-dl {
-        align-items: flex-start;
-      }
-
-      .footer-copy {
-        text-align: left;
-      }
-    }
-
-
     /* ═══════════════════════════════════════════════════
        ANIMATIONS
     ═══════════════════════════════════════════════════ */
-
-    /* --- Keyframes --- */
-
     @keyframes slideUp {
-      from {
-        opacity: 0;
-        transform: translateY(36px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(36px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-
-      to {
-        opacity: 1;
-      }
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(16px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes slideInLeft {
-      from {
-        opacity: 0;
-        transform: translateX(-24px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
+      from { opacity: 0; transform: translateX(-24px); }
+      to { opacity: 1; transform: translateX(0); }
     }
 
     @keyframes slideInRight {
-      from {
-        opacity: 0;
-        transform: translateX(24px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
+      from { opacity: 0; transform: translateX(24px); }
+      to { opacity: 1; transform: translateX(0); }
     }
 
     @keyframes scaleIn {
-      from {
-        opacity: 0;
-        transform: scale(0.92);
-      }
-
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
+      from { opacity: 0; transform: scale(0.92); }
+      to { opacity: 1; transform: scale(1); }
     }
 
+    .reveal { opacity: 0; }
 
-    /* --- Base hidden state for all reveal elements --- */
-    /* JS adds .is-visible when element enters viewport */
-
-    .reveal {
-      opacity: 0;
-    }
-
-    /* .sec-title → slide up (slow & smooth) */
     .reveal.anim-slide-up.is-visible {
       animation: slideUp 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
-    /* sec-num → fade in */
     .reveal.anim-fade.is-visible {
       animation: fadeIn 0.5s ease forwards;
     }
 
-    /* body text, bio → fade up subtly */
     .reveal.anim-fade-up.is-visible {
       animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     }
 
-    /* entry-date, skill-label → slide from left */
     .reveal.anim-left.is-visible {
       animation: slideInLeft 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     }
 
-    /* entry-content → slide from right */
     .reveal.anim-right.is-visible {
       animation: slideInRight 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     }
 
-    /* hero image, badges → scale in */
     .reveal.anim-scale.is-visible {
       animation: scaleIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     }
 
-    /* hr rules → fade in */
     .reveal.anim-rule.is-visible {
       animation: fadeIn 0.4s ease forwards;
     }
 
-    /* stagger helpers */
-    .delay-1 {
-      animation-delay: 0.08s !important;
-    }
+    .delay-1 { animation-delay: 0.08s !important; }
+    .delay-2 { animation-delay: 0.16s !important; }
+    .delay-3 { animation-delay: 0.24s !important; }
+    .delay-4 { animation-delay: 0.32s !important; }
+    .delay-5 { animation-delay: 0.40s !important; }
 
-    .delay-2 {
-      animation-delay: 0.16s !important;
-    }
-
-    .delay-3 {
-      animation-delay: 0.24s !important;
-    }
-
-    .delay-4 {
-      animation-delay: 0.32s !important;
-    }
-
-    .delay-5 {
-      animation-delay: 0.40s !important;
-    }
-
-    /* nav — always visible, animate on load */
     nav {
       animation: fadeIn 0.6s ease both;
     }
 
-    /* hero name on load */
-    .hero-name {
-      /* handled by JS reveal like everything else */
-    }
-
-    /* badge hover micro-interaction */
     .badge {
-      transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1),
-        background 0.2s ease;
+      transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), background 0.2s ease;
     }
 
     .badge:hover {
@@ -756,7 +516,6 @@
       background: #444;
     }
 
-    /* footer links hover */
     .footer-dl a,
     .footer-contact-row a {
       text-decoration: none;
@@ -793,6 +552,424 @@
       background: var(--gray-900);
       color: var(--gray-200);
     }
+
+    /* ═══════════════════════════════════════════════════
+       TABLET — 8 columns, ≤ 900px
+       font-size 64px → 32px, 16px → 12px, 10px → 10px
+    ═══════════════════════════════════════════════════ */
+    @media (max-width: 900px) {
+
+      /* Switch to 8-column grid */
+      .page-grid {
+        grid-template-columns: repeat(8, 1fr);
+      }
+
+      nav {
+        grid-template-columns: repeat(8, 1fr);
+        padding: 24px var(--margin);
+      }
+
+      /* Nav */
+      .nav-logo {
+        grid-column: 1 / 3;
+        font-size: 12px;
+      }
+
+      .nav-links {
+        grid-column: 3 / 7;
+        font-size: 12px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .nav-loc {
+        display: none;
+      }
+
+      /* Typography scale: 64 → 32 */
+      .h1 {
+        font-size: 32px;
+      }
+
+      .sec-title {
+        font-size: 32px;
+        padding: clamp(24px, 3vw, 24px) 0 clamp(12px, 2vw, 16px);
+      }
+
+      .sec-num {
+        font-size: 32px;
+        padding: clamp(24px, 3vw, 24px) 0 clamp(12px, 2vw, 16px);
+      }
+
+      .hero-name {
+        font-size: 32px;
+      }
+
+      /* Typography scale: 16 → 12 */
+      .h2 {
+        font-size: 12px;
+      }
+
+      .h3 {
+        font-size: 12px;
+      }
+
+      .body {
+        font-size: 12px;
+      }
+
+      .skill-label {
+        font-size: 12px;
+      }
+
+      .skill-item-text .h2 {
+        font-size: 12px;
+      }
+
+      .det-label {
+        font-size: 12px;
+      }
+
+      .entry-content .skills {
+        font-size: 12px;
+      }
+
+      .nav-logo {
+        font-size: 12px;
+      }
+
+      /* rule-grid spans full 8 cols */
+      .rule-grid {
+        grid-column: 1 / -1;
+      }
+
+      /* Hero */
+      .hero-num {
+        grid-column: 1;
+      }
+
+      .hero-name {
+        grid-column: 2 / 7;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      /* Profile photo: keep same size, stays right */
+      .hero-img {
+        grid-column: 7 / 9;
+        width: 100%;
+      }
+
+      /* Bio */
+      .bio-wrap {
+        grid-column: 1 / -1;
+      }
+
+      /* Section headers */
+      .sec-num {
+        grid-column: 1;
+        align-self: end;
+      }
+
+      .sec-title {
+        grid-column: 2 / -1;
+        align-self: end;
+      }
+
+      /* Personal details */
+      .det-label {
+        grid-column: 1 / 3;
+      }
+
+      .det-val-a {
+        grid-column: 3 / 6;
+      }
+
+      .det-val-b {
+        grid-column: 6 / 9;
+      }
+
+      .det-val-full {
+        grid-column: 3 / -1;
+      }
+
+      .det-spacer {
+        grid-column: 1 / -1;
+      }
+
+      /* Experience entries */
+      .entry-date {
+        grid-column: 1 / 3;
+      }
+
+      .entry-tag {
+        grid-column: 3 / 5;
+        font-size: 12px;
+      }
+
+      .entry-content {
+        grid-column: 5 / -1;
+        font-size: 12px;
+      }
+
+      /* Skills */
+      .skill-label {
+        grid-column: 1 / 3;
+      }
+
+      .skill-grid {
+        grid-column: 3 / -1;
+        grid-template-columns: repeat(6, 1fr);
+      }
+
+      /* Footer */
+      footer {
+        grid-template-columns: repeat(8, 1fr);
+      }
+
+      .footer-contact {
+        grid-column: 1 / 5;
+        font-size: 12px;
+      }
+
+      .footer-dl {
+        grid-column: 5 / 7;
+      }
+
+      .footer-dl a {
+        font-size: 12px;
+      }
+
+      .footer-copy {
+        grid-column: 7 / -1;
+        font-size: 12px;
+      }
+    }
+
+    /* ═══════════════════════════════════════════════════
+       MOBILE — 4 columns, ≤ 482px
+       font-size 64px → 24px, 16px → 12px, 10px → 10px
+    ═══════════════════════════════════════════════════ */
+    @media (max-width: 482px) {
+
+      /* Switch to 4-column grid */
+      .page-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      nav {
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 12px;
+        padding: 20px var(--margin);
+      }
+
+      .nav-logo {
+        grid-column: 1 / 3;
+        font-size: 12px;
+      }
+
+      .nav-links {
+        grid-column: 1 / -1;
+        font-size: 12px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .nav-loc {
+        display: none;
+      }
+
+      /* Typography scale: 64 → 24 */
+      .h1 {
+        font-size: 18px;
+      }
+
+      .sec-title {
+        font-size: 18px;
+        padding: 56px 0 12px;
+      }
+
+      .sec-num {
+        font-size: 18px;
+        padding: 56px 0 12px;
+      }
+
+      .hero-name {
+        font-size: 18px;
+      }
+
+      /* Typography scale: 16 → 12 */
+      .h2 {
+        font-size: 12px;
+      }
+
+      .h3 {
+        font-size: 12px;
+      }
+
+      .body {
+        font-size: 12px;
+      }
+
+      .skill-label {
+        font-size: 12px;
+      }
+
+      .skill-item-text .h2 {
+        font-size: 12px;
+      }
+
+      .det-label {
+        font-size: 12px;
+      }
+
+      .entry-content .skills {
+        font-size: 12px;
+      }
+
+      /* rule-grid full width */
+      .rule-grid {
+        grid-column: 1 / -1;
+      }
+
+      /* Hero — number col 1, name col 2–4, photo stays col 4 (same size) */
+      .hero-num {
+        grid-column: 1;
+      }
+
+      .hero-name {
+        grid-column: 2 / 4;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      /* Profile photo: keep same visual size, pinned to right */
+      .hero-img {
+        grid-column: 4 / 5;
+        width: 100%;
+      }
+
+      /* Bio */
+      .bio-wrap {
+        grid-column: 1 / -1;
+        gap: 16px;
+      }
+
+      /* Section headers */
+      .sec-num {
+        grid-column: 1;
+      }
+
+      .sec-title {
+        grid-column: 2 / -1;
+      }
+
+      /* Personal details */
+      .det-label {
+        grid-column: 1 / -1;
+        padding-bottom: 8px;
+      }
+
+      .det-val-a {
+        grid-column: 1 / 3;
+        padding-top: 0;
+      }
+
+      .det-val-b {
+        grid-column: 3 / -1;
+        padding-top: 0;
+      }
+
+      .det-val-full {
+        grid-column: 1 / -1;
+        padding-top: 0;
+      }
+
+      .det-spacer {
+        grid-column: 1 / -1;
+        height: 8px;
+      }
+
+      /* Experience entries */
+      .entry-date {
+        grid-column: 1 / 2;
+        padding-bottom: 0;
+      }
+
+      .entry-tag {
+        grid-column: 3 / -1;
+        font-size: 12px;
+        padding-bottom: 24;
+      }
+
+      .entry-content {
+        grid-column: 1 / -1;
+        padding-top: 8px;
+        font-size: 12px;
+      }
+
+      /* Skills */
+      .skill-label {
+        grid-column: 1 / -1;
+        padding-bottom: 0;
+      }
+
+      .skill-grid {
+        grid-column: 1 / -1;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 16px;
+      }
+
+      .skill-item {
+        grid-column: span 1 !important;
+      }
+
+      /* Badge stays same size */
+      .badge {
+        width: 48px;
+        height: 48px;
+        font-size: 12px;
+      }
+
+      /* Footer */
+      footer {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+      }
+
+      .footer-contact,
+      .footer-dl,
+      .footer-copy {
+        grid-column: 1;
+      }
+
+      .footer-contact {
+        font-size: 12px;
+      }
+
+      .footer-dl {
+        align-items: flex-start;
+        margin-top: 0;
+      }
+
+      .footer-dl a {
+        font-size: 12px;
+      }
+
+      .footer-copy {
+        font-size: 12px;
+        text-align: left;
+      }
+
+      /* Reduce large spacers on mobile */
+      .sec-num {
+        padding-top: clamp(48px, 8vw, 80px);
+      }
+    }
   </style>
 </head>
 
@@ -821,8 +998,7 @@
       <hr class="rule-grid reveal anim-rule">
       <div class="hero-num h1 reveal anim-fade">00</div>
       <div class="hero-name reveal anim-slide-up">ZO /<br />NATHAMON<br />KHANKHAYAN</div>
-      <img class="hero-img reveal anim-scale"
-        src="./zo.png" alt="Zo Khankhayan" />
+      <img class="hero-img reveal anim-scale" src="./zo.png" alt="Zo Khankhayan" />
       <hr class="rule-grid reveal anim-rule" />
     </div>
 
@@ -889,7 +1065,7 @@
     <!-- ════ 02 WORK EXPERIENCE ════ -->
     <div class="page-grid">
       <div class="sec-num h1 reveal anim-fade">02</div>
-      <div class="sec-title right reveal anim-slide-up">WORK EXPERIENCE</div>
+      <div class="sec-title reveal anim-slide-up">WORK EXPERIENCE</div>
     </div>
 
     <!-- Easy Rice -->
@@ -1005,7 +1181,7 @@
             documented.</li>
           <li>Reflected Ceiling Plan (RCP): Assisted under the team lead to ensure ceilings were correctly specified and
             drawn, coordinated with mechanical, fire, and electrical team requirements.</li>
-          
+
           <p class="body" style="margin-top:8px;">Pre-Construction Stage / Draft IFT</p>
           <li>Door Schedule: Established doors and corresponding schedules to meet client, interior and mechanical
             requirements at Draft IFC documentation.</li>
@@ -1031,7 +1207,7 @@
     <!-- ════ 03 VOLUNTEERING ════ -->
     <div class="page-grid">
       <div class="sec-num h1 reveal anim-fade">03</div>
-      <div class="sec-title right reveal anim-slide-up">VOLUNTEERING</div>
+      <div class="sec-title reveal anim-slide-up">VOLUNTEERING</div>
     </div>
 
     <div class="page-grid">
@@ -1101,7 +1277,7 @@
     <!-- 3D Modeling & Rendering -->
     <div class="page-grid">
       <hr class="rule-grid reveal anim-rule" />
-      <div class="skill-label reveal anim-left">3D MODELING<br />&amp; RENDERING</div>
+      <div class="skill-label reveal anim-left">3D & RENDERING</div>
       <div class="skill-grid">
         <div class="skill-item reveal anim-fade-up">
           <div class="badge">SKP</div>
@@ -1113,7 +1289,7 @@
         <div class="skill-item reveal anim-fade-up delay-1">
           <div class="badge">RVT</div>
           <div class="skill-item-text">
-            <div class="h2">AUTODESK REVIT</div>
+            <div class="h2">REVIT</div>
             <div class="h4">3 years<br />in professional practice</div>
           </div>
         </div>
@@ -1180,7 +1356,7 @@
     <!-- Document / Project Management -->
     <div class="page-grid">
       <hr class="rule-grid reveal anim-rule" />
-      <div class="skill-label reveal anim-left">DOCUMENT &amp;<br />PROJECT MGMT</div>
+      <div class="skill-label reveal anim-left">DOCUMENT</div>
       <div class="skill-grid">
         <div class="skill-item reveal anim-fade-up">
           <div class="badge">MS</div>
@@ -1209,7 +1385,7 @@
     <!-- Front-end / Coding -->
     <div class="page-grid">
       <hr class="rule-grid reveal anim-rule" />
-      <div class="skill-label reveal anim-left">FRONT-END /<br />CODING</div>
+      <div class="skill-label reveal anim-left">CODING</div>
       <div class="skill-grid">
         <div class="skill-item reveal anim-fade-up">
           <div class="badge">CSS</div>
@@ -1277,9 +1453,7 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('is-visible');
-          // re-trigger if scrolled away and back
         } else {
-          // remove so it re-animates on scroll back
           entry.target.classList.remove('is-visible');
         }
       });
