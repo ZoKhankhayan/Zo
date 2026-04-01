@@ -138,6 +138,20 @@
       border-top: 1px solid var(--rule-color);
     }
 
+
+    .rule-grid-top {
+  grid-column: 3 / 13;
+  border: none;
+  border-top: 1px solid var(--rule-color);
+  margin-top: 300px;
+}
+
+.rule-grid-bottom {
+  grid-column: 6 / 13;
+  border: none;
+  margin-bottom: 300px;
+}
+
     /* ═══════════════════════════════════════════════════
        NAV
     ═══════════════════════════════════════════════════ */
@@ -605,6 +619,7 @@
 
       .hero-name {
         font-size: 32px;
+       
       }
 
       /* Typography scale: 16 → 12 */
@@ -645,9 +660,20 @@
         grid-column: 1 / -1;
       }
 
+        .rule-grid-top {
+  grid-column: 1 / -1;
+  margin-top: 100px;
+}
+
+.rule-grid-bottom {
+  grid-column: 1 / -1;
+  margin-bottom: 100px;
+}
+
       /* Hero */
       .hero-num {
         grid-column: 1;
+         padding: clamp(10px, 3vw, 10px) 0 clamp(0px, 2vw, 16px);
       }
 
       .hero-name {
@@ -660,6 +686,7 @@
       .hero-img {
         grid-column: 7 / 9;
         width: 100%;
+        padding: clamp(10px, 3vw, 10px) 0 clamp(0px, 2vw, 16px);
       }
 
       /* Bio */
@@ -839,6 +866,7 @@
       /* Hero — number col 1, name col 2–4, photo stays col 4 (same size) */
       .hero-num {
         grid-column: 1;
+        padding: clamp(10px, 3vw, 24px) 0 clamp(0px, 2vw, 16px);
       }
 
       .hero-name {
@@ -851,6 +879,7 @@
       .hero-img {
         grid-column: 4 / 5;
         width: 100%;
+        padding: clamp(10px, 3vw, 24px) 0 clamp(10px, 2vw, 16px);
       }
 
       /* Bio */
@@ -992,10 +1021,10 @@
   <div class="page-shell">
 
     <!-- ════ 00 HERO ════ -->
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
 
     <div class="page-grid">
-      <hr class="rule-grid reveal anim-rule">
+      <div class="rule-grid-top"></div>   <!-- at the top -->
       <div class="hero-num h1 reveal anim-fade">00</div>
       <div class="hero-name reveal anim-slide-up">ZO /<br />NATHAMON<br />KHANKHAYAN</div>
       <img class="hero-img reveal anim-scale" src="./zo.png" alt="Zo Khankhayan" />
@@ -1200,9 +1229,7 @@
       </div>
     </div>
 
-    <div class="page-grid">
-      <hr class="rule-grid reveal anim-rule" />
-    </div>
+    
 
     <!-- ════ 03 VOLUNTEERING ════ -->
     <div class="page-grid">
@@ -1240,9 +1267,7 @@
       </div>
     </div>
 
-    <div class="page-grid">
-      <hr class="rule-grid reveal anim-rule" />
-    </div>
+    
 
     <!-- ════ 04 AWARDS ════ -->
     <div class="page-grid">
@@ -1264,9 +1289,7 @@
       </div>
     </div>
 
-    <div class="page-grid">
-      <hr class="rule-grid reveal anim-rule" />
-    </div>
+    
 
     <!-- ════ 05 SKILL ════ -->
     <div class="page-grid">
@@ -1411,13 +1434,11 @@
       </div>
     </div>
 
-    <div class="page-grid">
-      <hr class="rule-grid reveal anim-rule" />
-    </div>
+    <div class="rule-grid-bottom"></div>
 
   </div><!-- end .page-shell -->
 
-  <br><br><br><br><br><br><br><br><br><br>
+ 
 
   <!-- ════ FOOTER ════ -->
   <footer class="reveal anim-fade-up">
@@ -1434,7 +1455,7 @@
     </div>
     <div class="footer-dl">
       <a target="_blank" href="./files/260331_RESUME_ZO KHANKHAYAN.pdf" class="body">Download Resume</a>
-      <a target="_blank" href="./files/260331_PORTFOLIO_ZO KHANKHAYAN.pdf" class="body">Download Portfolio</a>
+      <a target="_blank" href="./files/260331_PORTFOLIO_ZO KHANKHAYAN_A3.pdf" class="body">Download Portfolio</a>
     </div>
     <div class="footer-copy body">© 2026 Zo K. Designed &amp; built by me</div>
   </footer>
