@@ -391,7 +391,7 @@ nav {
   grid-column: 1;
   align-self: end;
   padding: clamp(200px, 5vw, 24px) 0 clamp(16px, 3vw, 24px);
-  margin-left: 40px;
+  
 }
 
 .sec-title {
