@@ -870,18 +870,60 @@ footer {
   .nav__links { gap: 20px; }
 }
 
+/* =============================================
+   RESPONSIVE — 480px
+   ============================================= */
+@media (max-width: 480px) {
+  :root { --h1-size: 32px; --margin: 16px; }
+  .nav__links { gap: 20px; }
+}
+
+
+/* =============================================
+   HAMBURGER MENU
+   ============================================= */
+@media (max-width: 1024px) {
+  .hamburger      { display: flex; }
+  .nav__links     { display: none; }
+  .nav__location  { align-items: flex-end; }
+}
+
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 4px;
+  z-index: 200;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--gray-900);
+  transition: transform 0.3s ease, opacity 0.3s ease, background 0.3s ease;
+}
+
+/* animate to X when open */
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 /* fullscreen overlay menu */
 .mobile-menu {
   position: fixed;
   inset: 0;
-  background: var(--gray-200);
+  background: var(--blue-200);
   z-index: 150;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items:center;
   justify-content: center;
   padding: 0 var(--margin);
-  gap: 40px;
+  gap: 16px;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease, background 0.3s ease;
@@ -896,17 +938,27 @@ footer {
   font-family: var(--font-family);
   font-size: clamp(12px, 6vw, 12px);
   font-weight: 600;
-  color: var(--gray-900);
+  color: var(--blue-900);
   text-decoration: none;
   transition: opacity 0.2s ease;
 }
+
+.your-element {
+  border-bottom: 1px solid var(--gray-900);
+  margin-left: calc(-1 * var(--margin));
+  margin-right: calc(-1 * var(--margin));
+  padding-left: var(--margin);
+  padding-right: var(--margin);
+}
+
+
 
 .mobile-menu a:hover { opacity: 0.5; }
 
 .mobile-menu .menu-location {
   font-size: 12px;
   font-weight: 400;
-  color: var(--gray-500);
+  color: var(--blue-500);
   margin-top: 24px;
 }
 

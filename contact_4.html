@@ -15,7 +15,7 @@
       flex-direction: column;
       justify-content: center;
       gap: 0;
-      padding: 80px 0;
+      padding: 20px 0;
       min-height: calc(100vh - 120px);
       overflow: hidden;
     }
@@ -153,14 +153,14 @@
 
 <body>
 
-  <!-- ════ NAV ════ -->
-  <nav class="nav">
+  <!-- NAV -->
+    <nav class="nav">
   <a href="index.html" class="nav__logo text-h2">ZO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KHANKHAYAN</a>
   
   <ul class="nav__links">
-    <li><a href="index.html" class="text-h2-regular">About me</a></li>
+    <li><a href="index.html" class="text-h2 active">About me</a></li>
     <li><a href="work.html" class="text-h2-regular">Work</a></li>
-    <li><a href="contact_4.html" class="text-h2-active">Contact</a></li>
+    <li><a href="contact_4.html" class="text-h2-regular">Contact</a></li>
   </ul>
 
   <span class="nav__location text-h2-regular">Based in Sydney</span>
@@ -336,6 +336,24 @@
   setTimeout(() => label.textContent = 'Zo.nathamon.k@gmail.com', 2000);
 }
   </script>
+
+
+<script>
+  const hamburger  = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+    });
+  });
+</script>
 
 </body>
 

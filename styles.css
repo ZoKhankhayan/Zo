@@ -280,7 +280,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 34px var(--margin);
+  padding: 20px var(--margin);
   width: 100%;
 }
 
@@ -327,7 +327,6 @@ nav {
   grid-column: 1;
   align-self: start;
   padding: clamp(24px, 5vw, 24px) 0 clamp(16px, 3vw, 24px);
-  margin-left: 40px;
 }
 
 .hero-name {
@@ -359,7 +358,7 @@ nav {
 /* =============================================
    HERO — PAGE 2
    ============================================= */
-.hero, .section-heading { padding: 40px var(--margin) 48px; }
+.hero, .section-heading { padding: 10px var(--margin) 10px; }
 
 .hero__title {
   font-size: var(--h1-size);
@@ -377,7 +376,7 @@ nav {
    ============================================= */
 .bio-wrap {
   grid-column: 3 / 13;
-  padding: clamp(12px, 4vw, 24px) 0;
+  padding: clamp(12px, 4vw, 40px) 0;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -847,6 +846,8 @@ footer {
   .skill-item-text .h2, .det-label,
   .entry-content .skills { font-size: 12px; }
 
+  .body{ font-size: 12px; }
+
   .project-card__label{ font-size: 12px; 
   margin-right: 12px;}
 
@@ -886,8 +887,14 @@ footer {
   .footer-copy    { font-size: 12px; text-align: left; }
 
   .sec-num { padding-top: clamp(48px, 8vw, 80px); }
+  
+  .hero__title {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
+
+}
 
 
 /* =============================================
