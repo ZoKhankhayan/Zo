@@ -7,24 +7,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
+
+
 <body>
 
  <!-- NAV -->
     <nav class="nav">
-      <a href="index.html" class="nav__logo text-h2">ZO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KHANKHAYAN</a>
-      <ul class="nav__links">
-        <li><a href="index.html" class="text-h2 active">About me</a></li>
-        <li><a href="work.html" class="text-h2 regular">Work</a></li>
-        <li><a href="contact_4.html" class="text-h2-regular">Contact</a></li>
-      </ul>
-      <span class="nav__location text-h2-regular">Based in Sydney</span>
-    </nav>
+  <a href="index.html" class="nav__logo text-h2">ZO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KHANKHAYAN</a>
+  
+  <ul class="nav__links">
+    <li><a href="index.html" class="text-h2 active">About me</a></li>
+    <li><a href="work.html" class="text-h2-regular">Work</a></li>
+    <li><a href="contact_4.html" class="text-h2-regular">Contact</a></li>
+  </ul>
 
-<!-- hamburger — only shows on mobile -->
-  <img src="files/ICON/Icon-Hamburger.svg" class="hamburger" id="hamburger" aria-label="Menu">
+  <span class="nav__location text-h2-regular">Based in Sydney</span>
+
+  <!-- hamburger — inside nav, same row as logo -->
+  <img src="files/ICON/Icon-Hamburger.svg" class="hamburger" id="hamburger" aria-label="Menu" />
+
 </nav>
 
-<!-- fullscreen mobile menu -->
+<!-- fullscreen mobile menu — outside nav -->
 <div class="mobile-menu" id="mobile-menu">
   <a href="index.html">About me</a>
   <a href="work.html">Work</a>
@@ -441,6 +445,23 @@
     }
     animateCursor();
   </script>
+
+<script>
+  const hamburger  = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+    });
+  });
+</script>
 
 </body>
 </html>
