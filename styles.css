@@ -509,7 +509,7 @@ nav {
 /* =============================================
    PROJECT GRID & CARD (page 2)
    ============================================= */
-.project-section { padding: 0 var(--margin) 80px; }
+.project-section { padding: 0 var(--margin) 40px; }
 
 .project-grid {
   display: grid;

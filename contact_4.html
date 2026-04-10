@@ -9,6 +9,27 @@
   <link rel="stylesheet" href="styles.css" />
   <style>
     /* ── Marquee zone — full width, vertically centered ── */
+    .text-h2 {
+      font-size: var(--h2-size);
+      font-weight: 600;
+      color: var(--gray-900);
+    }
+
+    .text-h2-regular {
+      font-size: var(--h2-size);
+      font-weight: 400;
+      color: var(--gray-900);
+    }
+
+    .text-h4 {
+      font-size: var(--h4-size);
+      font-weight: 400;
+      color: var(--gray-500);
+    }
+
+    .nav__links a:hover  { opacity: 0.6; }
+.nav__links a.active { font-weight: 600; }
+
     .marquee-zone {
       width: 100%;
       display: flex;
@@ -77,22 +98,22 @@
       column-gap: var(--gutter);
     }
 
-   .contact-details {
-  grid-column: 10 / 13;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  border-bottom: 1px solid var(--gray-500);
-}
+    .contact-details {
+      grid-column: 10 / 13;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border-bottom: 1px solid var(--gray-500);
+    }
 
     .contact-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  border-top: 1px solid var(--gray-500);
-  padding: 12px 0;
-}
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      border-top: 1px solid var(--gray-500);
+      padding: 12px 0;
+    }
 
     .contact-item a,
     .contact-item span {
@@ -154,29 +175,29 @@
 <body>
 
   <!-- NAV -->
-    <nav class="nav">
-  <a href="index.html" class="nav__logo text-h2">ZO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KHANKHAYAN</a>
-  
-  <ul class="nav__links">
-    <li><a href="index.html" class="text-h2 active">About me</a></li>
-    <li><a href="work.html" class="text-h2-regular">Work</a></li>
-    <li><a href="contact_4.html" class="text-h2-regular">Contact</a></li>
-  </ul>
+  <nav class="nav">
+    <a href="index.html" class="nav__logo text-h2">ZO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KHANKHAYAN</a>
 
-  <span class="nav__location text-h2-regular">Based in Sydney</span>
+    <ul class="nav__links">
+      <li><a href="index.html" class="text-h2-regular">About me</a></li>
+      <li><a href="work.html" class="text-h2-regular">Work</a></li>
+      <li><a href="contact_4.html" class="text-h2-active"><strong>Contact</strong></a></li>
+    </ul>
 
-  <!-- hamburger — inside nav, same row as logo -->
-  <img src="files/ICON/Icon-Hamburger.svg" class="hamburger" id="hamburger" aria-label="Menu" />
+    <span class="nav__location text-h2-regular">Based in Sydney</span>
 
-</nav>
+    <!-- hamburger — inside nav, same row as logo -->
+    <img src="files/ICON/Icon-Hamburger.svg" class="hamburger" id="hamburger" aria-label="Menu" />
 
-<!-- fullscreen mobile menu — outside nav -->
-<div class="mobile-menu" id="mobile-menu">
-  <a href="index.html">About me</a>
-  <a href="work.html">Work</a>
-  <a href="contact.html">Contract</a>
-  <span class="menu-location">Based in Sydney</span>
-</div>
+  </nav>
+
+  <!-- fullscreen mobile menu — outside nav -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">About me</a>
+    <a href="work.html">Work</a>
+    <a href="contact.html">Contract</a>
+    <span class="menu-location">Based in Sydney</span>
+  </div>
 
 
   <!-- ════ MARQUEE — full width, center screen ════ -->
@@ -190,10 +211,10 @@
     </div>
 
     <div class="marquee-track reverse">
-      <span>Let's create something great together —</span>
-      <span>Let's create something great together —</span>
-      <span>Let's create something great together —</span>
-      <span>Let's create something great together —</span>
+      <span>Hi, I'm looking forward to working with you —</span>
+      <span>Hi, I'm looking forward to working with you —</span>
+      <span>Hi, I'm looking forward to working with you —</span>
+      <span>Hi, I'm looking forward to working with you —</span>
     </div>
 
     <div class="marquee-track">
@@ -270,23 +291,23 @@
   </div>
 
   <!-- ════ FOOTER ════ -->
-   <footer class="reveal anim-fade-up">
-      <div class="footer-contact">
-        <div class="footer-contact-row"><span><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
-              data-cfemail="8bd1e4a5c5eaffe3eae6e4e5a5c0cbece6eae2e7a5e8e4e6">Zo.nathamon.K@gmail.com</a></span></div>
-        <div class="footer-contact-row"><a href="https://www.behance.net/Zo_Khankhayan" target="_blank">Behance</a>
-        </div>
-        <div class="footer-contact-row"><a href="https://www.linkedin.com/in/zo-khankhayan-32413b2a5"
-            target="_blank">LinkedIn</a></div>
+  <footer class="reveal anim-fade-up">
+    <div class="footer-contact">
+      <div class="footer-contact-row"><span><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+            data-cfemail="8bd1e4a5c5eaffe3eae6e4e5a5c0cbece6eae2e7a5e8e4e6">Zo.nathamon.K@gmail.com</a></span></div>
+      <div class="footer-contact-row"><a href="https://www.behance.net/Zo_Khankhayan" target="_blank">Behance</a>
       </div>
-      <div class="footer-dl">
-        <a target="_blank" href="./files/260407_PORTFOLIO_ZO KHANKHAYAN_A3.pdf">Download Portfolio</a>
-        <a target="_blank" href="./files/260407_RESUME_ZO KHANKHAYAN_A4.pdf">Download Resume</a>
-      </div>
-      <div class="footer-copy">Zo K. Designed &amp; built by me</div>
-    </footer>
+      <div class="footer-contact-row"><a href="https://www.linkedin.com/in/zo-khankhayan-32413b2a5"
+          target="_blank">LinkedIn</a></div>
+    </div>
+    <div class="footer-dl">
+      <a target="_blank" href="./files/260407_PORTFOLIO_ZO KHANKHAYAN_A3.pdf">Download Portfolio</a>
+      <a target="_blank" href="./files/260407_RESUME_ZO KHANKHAYAN_A4.pdf">Download Resume</a>
+    </div>
+    <div class="footer-copy">Zo K. Designed &amp; built by me</div>
+  </footer>
 
-  
+
 
   <!-- ════ THEME TOGGLE ════ -->
   <button id="theme-toggle">Dark</button>
@@ -330,30 +351,30 @@
     animateCursor();
 
     function copyEmail() {
-  navigator.clipboard.writeText('Zo.nathamon.k@gmail.com');
-  const label = document.querySelector('.email-label');
-  label.textContent = 'Copied!';
-  setTimeout(() => label.textContent = 'Zo.nathamon.k@gmail.com', 2000);
-}
+      navigator.clipboard.writeText('Zo.nathamon.k@gmail.com');
+      const label = document.querySelector('.email-label');
+      label.textContent = 'Copied!';
+      setTimeout(() => label.textContent = 'Zo.nathamon.k@gmail.com', 2000);
+    }
   </script>
 
 
-<script>
-  const hamburger  = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobile-menu');
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
-  });
-
-  mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      mobileMenu.classList.remove('open');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
     });
-  });
-</script>
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+      });
+    });
+  </script>
 
 </body>
 
